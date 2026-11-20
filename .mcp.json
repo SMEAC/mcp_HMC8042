@@ -1,0 +1,18 @@
+{
+  "mcpServers": {
+    "hmc8042": {
+      "command": "uv",
+      "args": ["run", "--directory", "c:/dev/MCP_HMC8042", "python", "-m", "hmc8042_mcp.server"],
+      "env": {
+        "HMC_HOST": "169.254.103.109",
+        "HMC_MAX_VOLTAGE": "30",
+        "HMC_MAX_CURRENT": "5"
+      }
+    },
+    "hmc8042-sim": {
+      "command": "uv",
+      "args": ["run", "--directory", "c:/dev/MCP_HMC8042", "python", "-m", "hmc8042_mcp.server"],
+      "env": { "HMC_RESOURCE": "SIM", "HMC_MAX_VOLTAGE": "30", "HMC_MAX_CURRENT": "5" }
+    }
+  }
+}
